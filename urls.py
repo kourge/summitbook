@@ -1,11 +1,10 @@
 from django.conf import settings
 from django.conf.urls.defaults import *
 
-from basket import admin
-
 
 urlpatterns = patterns('',
-    #('^subscriptions/', include('subscriptions.urls')),
+    ('', include('people.urls')),
+    ('^people/', include('people.urls')),
 )
 
 if settings.DEBUG:
