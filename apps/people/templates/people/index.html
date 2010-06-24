@@ -1,4 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
-hi
+<header>
+  <form action="search.php" method="get" id="phonebook-search">
+    <h1><a href="./">Summitbook</a></h1>
+    <div id="search-region">
+      <input type="hidden" name="format" value="html" />
+      <input type="text" name="query" id="text" size="18" /><button type="submit" id="search">Search</button>
+
+    </div>
+    <div id="throbber"></div>
+    <ul id="menu">
+      <li><a class="card persist" href="./">Cards</a></li>
+      <li><a class="wall persist" href="./faces">Faces</a></li>
+      <li><a class="tree persist" href="./tree">Org Chart</a></li>
+      <li class="edit"><a class="edit" href="./edit" id="edit-entry">Edit My Entry</a></li>
+
+    </ul>
+  </form>
+</header>
+
+<div id="results"></div>
+
+<script src="/media/js/view-cards.js"></script>
 {% endblock %}
