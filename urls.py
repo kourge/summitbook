@@ -3,7 +3,7 @@ from django.conf.urls.defaults import *
 
 
 urlpatterns = patterns('',
-    ('', include('people.urls')),
+    ('^$', include('people.urls')),
     ('^people/', include('people.urls')),
 )
 
