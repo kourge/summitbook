@@ -1,10 +1,13 @@
 from django.conf import settings
 from django.conf.urls.defaults import *
+from django.contrib import admin
 
+admin.autodiscover()
 
 urlpatterns = patterns('',
     ('^$', include('people.urls')),
     ('^people/', include('people.urls')),
+    ('^admin/', include(admin.site.urls)),
 )
 
 if settings.DEBUG:
